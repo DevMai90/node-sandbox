@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DevMai90/node-sandbox/issues"
   },
-  "homepage": "https://github.com/DevMai90/node-sandbox#readme"
+  "homepage": "https://github.com/DevMai90/node-sandbox#readme",
+  "dependencies": {
+    "uuid": "^3.3.2"
+  }
 }
