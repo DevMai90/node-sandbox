@@ -18,5 +18,8 @@
   "homepage": "https://github.com/DevMai90/node-sandbox#readme",
   "dependencies": {
     "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
   }
 }
