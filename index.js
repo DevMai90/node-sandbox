@@ -6,9 +6,20 @@ const fs = require('fs');
 const server = http.createServer((req, res) => {
   // We want to load a file
   if (req.url === '/') {
-    // Add header - Write content type
-    res.writeHead(200, { 'Content-Type': 'text/html' });
-    res.end('<h1>Home</h1>');
+    fs.readFile(
+      // Create path to index.html from public folder
+      path.join(__dirname, '/public', 'index.html'),
+      'utf8',
+      (err, data) => {
+        if (err) {
+          throw err;
+        }
+        // Add header - Write content type
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        // Render our response which is the index.html file
+        res.end(data);
+      }
+    );
   }
 });
 
