@@ -91,7 +91,7 @@ This is where Express comes in. Express is a backend framework.
   fs.readFile(filePath, (err, data) => {
     if (err) {
       // Check error code. ENOENT means the page wasn't found
-      if (err === 'ENOENT') {
+      if (err.code == 'ENOENT') {
         // Page not found - Load error page
         fs.readFile(path.join(__dirname, 'public', '404.html'), (err, data) => {
           res.writeHead(200, { 'Content-Type': contentType });
